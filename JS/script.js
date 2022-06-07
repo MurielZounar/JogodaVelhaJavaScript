@@ -2,8 +2,8 @@ let x = document.querySelector('.x')
 let o = document.querySelector('.o')
 let boxes = document.querySelectorAll('.box')
 let buttons = document.querySelectorAll('#buttons-container button')
-let messageContainer = document.querySelector('#message')
-let messageText = document.querySelector('#message p')
+let messageContainer = document.querySelector('.message')
+let messageText = document.querySelector('.message p')
 let secondPlayer
 let nightToggle = document.querySelector('#night')
 let dayToggle = document.querySelector('#day')
@@ -234,16 +234,16 @@ function checkWinCondition() {
 
 //LIMPA O JOGO, DECLARA O VENCEDOR E ATUALIZA O PLACAR
 function declareWinner(winner) {
-  let scoreboardX = document.querySelector('#scoreboard-1')
-  let scoreboardO = document.querySelector('#scoreboard-2')
+  let scoreboardX = document.querySelector('.scoreboard-1')
+  let scoreboardO = document.querySelector('.scoreboard-2')
   let msg = ''
 
   if (winner == 'x') {
     scoreboardX.textContent = parseInt(scoreboardX.textContent) + 1
-    msg = 'Jogador 1 Vendeu!'
+    msg = 'Jogador 1 Venceu!'
   } else if (winner == 'o') {
     scoreboardO.textContent = parseInt(scoreboardO.textContent) + 1
-    msg = 'Jogador 2 Vendeu!'
+    msg = 'Jogador 2 Venceu!'
   } else {
     msg = 'Deu Velha!'
   }
@@ -294,25 +294,43 @@ function computerPlay() {
 
 function changeTheme(theme) {
   let wall = document.body
+  let back = document.querySelector('.focus')
+  let title = document.querySelector('h1')
+  let scoreTitle = document.querySelector('.scoreboard-title')
+  let score = document.getElementsByClassName('score')
+  let message = document.querySelector('.message')
 
   console.log(messageText)
 
   if (theme == 'toggle-night') {
     nightToggle.classList.add('hide')
     dayToggle.classList.remove('hide')
+    back.classList.add('dark-focus')
     wall.classList.toggle('dark')
+    title.classList.add('dark-title')
+    scoreTitle.classList.add('dark-scoreboard-title')
+
     for (let i = 0; i < boxes.length; i++) {
       boxes[i].classList.add('dark-box')
     }
-    messageText.style.color = 'rgb(46, 203, 220)'
-    messageText.style.backgroundcolor = rgb(150, 150, 150)
+
+    score[0].classList.add('dark-score')
+    score[1].classList.add('dark-score')
+    message.classList.add('dark-message')
   } else {
     nightToggle.classList.remove('hide')
     dayToggle.classList.add('hide')
+    back.classList.remove('dark-focus')
     wall.classList.remove('dark')
+    title.classList.remove('dark-title')
+    scoreTitle.classList.remove('dark-scoreboard-title')
+
     for (let i = 0; i < boxes.length; i++) {
       boxes[i].classList.remove('dark-box')
     }
-    messageText.style.color = 'aliceblue'
+
+    score[0].classList.remove('dark-score')
+    score[1].classList.remove('dark-score')
+    message.classList.remove('dark-message')
   }
 }

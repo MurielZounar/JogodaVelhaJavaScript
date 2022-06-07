@@ -8,59 +8,60 @@
     <link rel="stylesheet" href="CSS/styles.css" />
   </head>
   <body>
-    <div id="header">
-      <img
-        id="night"
-        class="toggle-night"
-        src="assets/img/night.svg"
-        alt="Change to dark theme"
-      />
-      <img
-        id="day"
-        class="toggle-day hide"
-        src="assets/img/desert.svg"
-        alt="Change to light theme"
-      />
-    </div>
-    <h1>Jogo da Velha</h1>
-    <div id="buttons-container">
-      <button id="players-2">2 Jogadores</button>
-      <button id="ai-player">Contra IA</button>
-    </div>
-    <div id="container" class="hide">
-      <div id="block-1" class="box"></div>
-      <div id="block-2" class="box"></div>
-      <div id="block-3" class="box"></div>
-      <div id="block-4" class="box"></div>
-      <div id="block-5" class="box"></div>
-      <div id="block-6" class="box"></div>
-      <div id="block-7" class="box"></div>
-      <div id="block-8" class="box"></div>
-      <div id="block-9" class="box"></div>
+    <div class="focus">
+      <div id="header">
+        <img
+          id="night"
+          class="toggle-night"
+          src="assets/img/night.svg"
+          alt="Change to dark theme"
+        />
+        <img
+          id="day"
+          class="toggle-day hide"
+          src="assets/img/day.svg"
+          alt="Change to light theme"
+        />
+      </div>
+      <h1>Jogo da Velha</h1>
+      <div id="buttons-container">
+        <button id="players-2">2 Jogadores</button>
+        <button id="ai-player">Contra IA</button>
+      </div>
+      <div id="container" class="hide">
+        <div id="block-1" class="box"></div>
+        <div id="block-2" class="box"></div>
+        <div id="block-3" class="box"></div>
+        <div id="block-4" class="box"></div>
+        <div id="block-5" class="box"></div>
+        <div id="block-6" class="box"></div>
+        <div id="block-7" class="box"></div>
+        <div id="block-8" class="box"></div>
+        <div id="block-9" class="box"></div>
 
-      <div id="scoreboard-container">
-        <h2 id="scoreboard-title">Placar:</h2>
-        <span class="score-box">
-          <span id="x-scoreboard">X</span>:
-          <span id="scoreboard-1">0</span>
-        </span>
+        <div id="scoreboard-container">
+          <h2 class="scoreboard-title">Placar:</h2>
+          <span class="score-box">
+            <span id="x-scoreboard">X</span>:
+            <span class="scoreboard-1 score">0</span>
+          </span>
 
-        <span class="score-box">
-          <span id="o-scoreboard"></span>:
-          <span id="scoreboard-2">0</span>
-        </span>
+          <span class="score-box">
+            <span id="o-scoreboard"></span>:
+            <span class="scoreboard-2 score">0</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="hide">
+        <div class="x">X</div>
+        <div class="o"></div>
+      </div>
+
+      <div class="message hide">
+        <p></p>
       </div>
     </div>
-
-    <div class="hide">
-      <div class="x">X</div>
-      <div class="o"></div>
-    </div>
-
-    <div id="message" class="hide">
-      <p>TESTE</p>
-    </div>
-
     <script src="JS/script.js"></script>
   </body>
 </html>

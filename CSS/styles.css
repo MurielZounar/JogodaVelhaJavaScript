@@ -1,5 +1,5 @@
 body {
-  text-align: center;
+  align-items: center;
   font-family: Helvetica, sans-serif;
 }
 
@@ -7,9 +7,28 @@ body {
   background-color: rgb(23, 23, 23);
 }
 
+.focus {
+  width: 500px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 1px 1px 30px rgba(70, 0, 144, 0.571);
+}
+
+.dark-focus {
+  box-shadow: 1px 1px 30px rgba(37, 203, 206, 0.571);
+}
+
 h1 {
   font-size: 42px;
-  color: rgb(102, 37, 206);;
+  color: rgb(102, 37, 206);
+}
+
+.dark-title {
+  color: rgb(42, 190, 158);
 }
 
 /* TOGGLE TEMA */
@@ -18,16 +37,24 @@ h1 {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: 400px;
-  top: 5px;
+  left: 430px;
+  top: 40px;
+}
+
+#day:hover {
+  cursor: pointer;
 }
 
 #night{
   width: 27px;
   height: 27px;
   position: absolute;
-  left: 400px;
-  top: 5px;
+  left: 430px;
+  top: 40px;
+}
+
+#night:hover {
+  cursor: pointer;
 }
 
 /* BOTÕES */
@@ -35,7 +62,9 @@ h1 {
 #buttons-container button {
   border: none;
   padding: 10px 15px;
-  margin: 0 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   border-radius: 15px;
 }
 
@@ -44,9 +73,17 @@ h1 {
   color: white;
 }
 
+#players-2:hover {
+  cursor: pointer;
+}
+
 #ai-player {
   background-color: rgb(102, 37, 206);
   color: white;
+}
+
+#ai-player:hover {
+  cursor: pointer;
 }
 
 /* JOGO */
@@ -67,7 +104,7 @@ h1 {
 
 .box {
   height: 100px;
-  border: 4px solid #000;
+  border: 4px solid rgb(78, 78, 78);
   box-sizing: border-box;
   flex: 1 1 33%;
 }
@@ -125,9 +162,15 @@ h1 {
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
-#scoreboard-title {
+
+.scoreboard-title {
+  color: rgb(102, 37, 206);
+}
+
+.dark-scoreboard-title {
   color: rgb(42, 190, 158);
 }
 
@@ -149,31 +192,30 @@ h1 {
   margin-left: 2px;
 }
 
-#scoreboard-1 {
-  color: rgb(102, 37, 206);
+.score {
+  color: rgb(57, 57, 57);
 }
 
-#scoreboard-2 {
-  color: rgb(42, 190, 158);
+.dark-score {
+  color: rgb(255, 255, 255);
 }
 
 
 /* MENSAGEM */
 
-#message p {
+.message p {
   position: absolute;
   margin-left: auto;
   left: 0;
   right: 0;
-  top: 150px;
-  width: 500px;
+  top: 175px;
   font-size: 50px;
-  background-color: rgb(0, 0, 0);
-  color: aliceblue;
+  background-color: rgba(35, 35, 35, 0.887);
+  color: rgb(162, 243, 255);
   padding: 20px;
 }
 
 .dark-message p {
-  background-color: rgb(150, 150, 150);
-  color: rgb(46, 203, 220);
+  background-color: rgba(169, 218, 208, 0.474);
+  color: rgb(25, 0, 66);
 }
